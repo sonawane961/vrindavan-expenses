@@ -1,0 +1,497 @@
+/* Simple Vrindavan Expenses App Styles */
+
+.page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  z-index: 1000;
+}
+
+.navTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 7rem;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ctas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.ctas button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.ctas button.primary {
+  background: #007bff;
+  color: white;
+}
+
+.ctas button.primary:hover {
+  background: #0056b3;
+}
+
+.ctas button.secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.ctas button.secondary:hover {
+  background: #545b62;
+}
+
+/* Form Styles */
+.expenseForm {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.expenseForm h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.checkboxGroup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #f8f9fa;
+}
+
+.checkboxLabel:hover {
+  background: #e9ecef;
+}
+
+.checkboxLabel input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+.allOption {
+  background: #fff3cd;
+  border-color: #ffeaa7;
+  font-weight: bold;
+}
+
+.allOption:hover {
+  background: #ffeaa7;
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.formActions button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.formActions button.secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.formActions button.secondary:hover {
+  background: #545b62;
+}
+
+.formActions button.primary {
+  background: #28a745;
+  color: white;
+}
+
+.formActions button.primary:hover {
+  background: #1e7e34;
+}
+
+.formActions button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Table Styles */
+.expensesTable,
+.spendsPerPerson,
+.exportSection {
+  margin-top: 2rem;
+}
+
+.expensesTable h2,
+.spendsPerPerson h2,
+.exportSection h2 {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.noExpenses {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  padding: 2rem;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.tableContainer {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.table th {
+  background: #f8f9fa;
+  color: #333;
+  padding: 1rem 0.75rem;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #dee2e6;
+  color: #333;
+}
+
+.table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.totalRow {
+  background: #fff3cd;
+  font-weight: bold;
+}
+
+.totalRow td {
+  border-top: 2px solid #ffeaa7;
+}
+
+.deleteBtn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.deleteBtn:hover {
+  background: #c82333;
+}
+
+/* Export Section */
+.exportButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.exportBtn {
+  background: #17a2b8;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  min-width: 150px;
+}
+
+.exportBtn:hover:not(:disabled) {
+  background: #138496;
+}
+
+.exportBtn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+.exportHint {
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Popup Styles */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.popup {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.popup h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  color: #333;
+  text-align: center;
+}
+
+.popup p {
+  margin: 0.5rem 0;
+  color: #666;
+  text-align: center;
+}
+
+.popupActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.popupActions button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.popupActions button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem;
+    padding-top: 6rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ctas button {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .expenseForm {
+    padding: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  .checkboxGroup {
+    grid-template-columns: 1fr;
+  }
+  
+  .formActions {
+    flex-direction: column;
+  }
+  
+  .formActions button {
+    width: 100%;
+  }
+  
+  .tableContainer {
+    overflow-x: auto;
+  }
+  
+  .table {
+    min-width: 600px;
+  }
+  
+  .exportButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .exportBtn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .popup {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .popupActions {
+    flex-direction: column;
+  }
+  
+  .popupActions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 0.75rem;
+    padding-top: 5rem;
+  }
+  
+  .navbar {
+    padding: 0.75rem;
+  }
+  
+  .navTitle {
+    font-size: 1.25rem;
+  }
+  
+  .title {
+    font-size: 1.25rem;
+  }
+  
+  .expenseForm {
+    padding: 1rem;
+  }
+  
+  .expenseForm h2 {
+    font-size: 1.25rem;
+  }
+  
+  .table {
+    min-width: 500px;
+    font-size: 0.875rem;
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.5rem;
+  }
+  
+  .exportBtn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
